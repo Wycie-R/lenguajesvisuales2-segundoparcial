@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using System.IO.Compression;
 using WebApiExamen.Data;
 using WebApiExamen.Models;

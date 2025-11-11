@@ -8,8 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Configurar DbContext con SQL Server
+Console.WriteLine($"Connection: " + builder.Configuration.GetConnectionString("DefaultConnection"));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Configurar Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
